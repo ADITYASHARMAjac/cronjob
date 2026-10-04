@@ -14,3 +14,10 @@
 3. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug "unknown unknowns" in production.
 4. Circuit breakers and bulkheads prevent cascade failures by isolating blast radius before thread pools exhaust and latency amplifies.
 5. Consistency is a spectrum, not a binary; choose the weakest model your business logic can tolerate to maximize availability and latency.
+
+### 🚀 [2026-10-04 14:00:24 UTC] Auto-Commit Entry
+1. An index is not free storage; it is a write-time tax paid to subsidize read-time latency, so measure the write amplification before celebrating the seek speed.
+2. Covering indexes eliminate key lookups by folding payload columns into the B-tree leaves, turning random I/O into sequential scans at the cost of index bloat.
+3. Statistics histograms drive the optimizer’s cardinality estimates; stale stats on skewed data distributions are the silent killer of plan stability.
+4. Sargable predicates preserve index utility—wrapping columns in functions or implicit conversions forces scans where seeks belong.
+5. Partition alignment and index fill factors are architectural levers, not tuning knobs; configure them for the write pattern, not the query of the week.
