@@ -21,3 +21,10 @@
 3. Statistics histograms drive the optimizer’s cardinality estimates; stale stats on skewed data distributions are the silent killer of plan stability.
 4. Sargable predicates preserve index utility—wrapping columns in functions or implicit conversions forces scans where seeks belong.
 5. Partition alignment and index fill factors are architectural levers, not tuning knobs; configure them for the write pattern, not the query of the week.
+
+### 🚀 [2026-10-04 20:00:09 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks drift arbitrarily.
+2. Idempotency keys are the only reliable contract for exactly-once semantics across unreliable transport layers.
+3. Circuit breakers prevent cascade failures, but only if fallback logic degrades gracefully rather than failing loudly.
+4. Observability requires structured logs, distributed traces, and metrics with high-cardinality dimensions to debug novel failure modes.
+5. Chaos engineering validates resilience hypotheses, but game days reveal the socio-technical gaps automation misses.
