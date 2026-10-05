@@ -56,3 +56,10 @@
 3. Offload heavy computation to Web Workers or `requestIdleCallback` to keep the main thread free for interaction, directly optimizing INP by preventing long tasks from blocking the event loop.
 4. Specify explicit `width` and `height` attributes on all media elements or use `aspect-ratio` in CSS to reserve layout space before bytes arrive, mathematically guaranteeing zero CLS from images.
 5. Leverage the `fetchpriority="high"` attribute on your LCP image and critical CSS link tags to instruct the browser scheduler to fetch hero resources before lower-priority scripts.
+
+### 🚀 [2026-10-05 20:00:19 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to bypass the preload scanner queue and eliminate the dominant cause of LCP variance.
+2. Adopt a `stale-while-revalidate` Cache-Control header for HTML documents to serve instant cached shells while asynchronously refreshing the backend, decoupling TTFB from user perception.
+3. Reserve explicit `width` and `height` attributes or `aspect-ratio` CSS for all media to prevent layout shifts, as CLS is fundamentally a geometry contract violation between layout and paint.
+4. Offload non-UI work to Web Workers via `partytown` or Comlink to reclaim the main thread for INP-critical interactions, treating the main thread as a real-time UI runtime, not a compute cluster.
+5. Implement granular `Cache-Control: immutable` with content-hashed filenames for static assets, because cache invalidation is a solved problem only when the URL itself becomes the version key.
