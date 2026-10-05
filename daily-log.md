@@ -49,3 +49,10 @@
 3. Offload heavy JavaScript execution to Web Workers via libraries like Partytown to unblock the main thread, directly improving Interaction to Next Paint (INP) and Total Blocking Time.
 4. Adopt a granular `Cache-Control: immutable` strategy with content-hashed filenames for static assets, ensuring zero round-trips for repeat visits without fear of stale deployments.
 5. Measure Real User Monitoring (RUM) data for INP and CLS instead of relying solely on lab tools, as synthetic tests consistently miss layout shifts triggered by dynamic content injection and third-party scripts.
+
+### 🚀 [2026-10-05 15:51:52 UTC] Auto-Commit Entry
+1. Prioritize `font-display: swap` and preload critical web fonts to eliminate layout shifts caused by late font rendering, the silent killer of CLS scores.
+2. Implement a stale-while-revalidate strategy via `Cache-Control` headers to serve instant cached responses while asynchronously fetching fresh assets, decoupling user latency from origin health.
+3. Offload heavy computation to Web Workers or `requestIdleCallback` to keep the main thread free for interaction, directly optimizing INP by preventing long tasks from blocking the event loop.
+4. Specify explicit `width` and `height` attributes on all media elements or use `aspect-ratio` in CSS to reserve layout space before bytes arrive, mathematically guaranteeing zero CLS from images.
+5. Leverage the `fetchpriority="high"` attribute on your LCP image and critical CSS link tags to instruct the browser scheduler to fetch hero resources before lower-priority scripts.
