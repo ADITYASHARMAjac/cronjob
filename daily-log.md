@@ -42,3 +42,10 @@
 3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
 4. Profile real production memory profiles before applying premature memory or CPU optimizations.
 5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
+
+### 🚀 [2026-10-05 14:28:15 UTC] Auto-Commit Entry
+1. Prioritize `preload` for critical LCP assets like hero images and web fonts to eliminate render-blocking request chains and slash Largest Contentful Paint latency.
+2. Implement `stale-while-revalidate` in your `Cache-Control` headers to serve instant cached responses while asynchronously fetching fresh content, optimizing both Speed Index and Time to First Byte.
+3. Offload heavy JavaScript execution to Web Workers via libraries like Partytown to unblock the main thread, directly improving Interaction to Next Paint (INP) and Total Blocking Time.
+4. Adopt a granular `Cache-Control: immutable` strategy with content-hashed filenames for static assets, ensuring zero round-trips for repeat visits without fear of stale deployments.
+5. Measure Real User Monitoring (RUM) data for INP and CLS instead of relying solely on lab tools, as synthetic tests consistently miss layout shifts triggered by dynamic content injection and third-party scripts.
