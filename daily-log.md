@@ -35,3 +35,10 @@
 3. Flaky tests are not "infrastructure problems"; they are lying specifications that destroy trust and paralyze deployment velocity—quarantine or delete them immediately.
 4. Invest in "locality of behavior" so a developer can understand a feature by reading one file, rather than navigating a distributed maze of indirection.
 5. Treat test suites as executable documentation: if a test name doesn't describe the business invariant it protects, the test has negative value regardless of its coverage percentage.
+
+### 🚀 [2026-10-05 14:00:01 UTC] Auto-Commit Entry
+1. Cache invalidation requires deterministic naming conventions and explicit time-to-live policies.
+2. Observe three pillars of telemetry: structured logs, dimensional metrics, and distributed traces.
+3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
+4. Profile real production memory profiles before applying premature memory or CPU optimizations.
+5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
