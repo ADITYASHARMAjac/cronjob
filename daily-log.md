@@ -28,3 +28,10 @@
 3. Circuit breakers prevent cascade failures, but only if fallback logic degrades gracefully rather than failing loudly.
 4. Observability requires structured logs, distributed traces, and metrics with high-cardinality dimensions to debug novel failure modes.
 5. Chaos engineering validates resilience hypotheses, but game days reveal the socio-technical gaps automation misses.
+
+### 🚀 [2026-10-05 09:00:14 UTC] Auto-Commit Entry
+1. Optimize for the cognitive load of the reader, not the keystrokes of the writer, because code is read exponentially more often than it is written.
+2. Debugging is the scientific method applied under duress: form a falsifiable hypothesis, instrument the smallest possible probe, and reject the null hypothesis before rewriting logic.
+3. Flaky tests are not "infrastructure problems"; they are lying specifications that destroy trust and paralyze deployment velocity—quarantine or delete them immediately.
+4. Invest in "locality of behavior" so a developer can understand a feature by reading one file, rather than navigating a distributed maze of indirection.
+5. Treat test suites as executable documentation: if a test name doesn't describe the business invariant it protects, the test has negative value regardless of its coverage percentage.
