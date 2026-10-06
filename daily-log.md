@@ -77,3 +77,10 @@
 3. Treat infrastructure as version-controlled code with reproducible declarative environments.
 4. Continuous testing in CI is cheaper than emergency hotfixing in production environments.
 5. Keep dependencies lean; auditing third-party vulnerabilities is a fundamental security duty.
+
+### 🚀 [2026-10-06 20:00:10 UTC] Auto-Commit Entry
+1. Design for partial failure by making idempotency a first-class citizen at every API boundary, not an afterthought.
+2. Observability without correlated tracing and structured logging is just expensive noise; instrument for the "why," not just the "what."
+3. Circuit breakers protect downstream dependencies, but bulkheads protect your own thread pools from cascading exhaustion.
+4. Consistency models are business contracts, not configuration flags; choose the weakest model that satisfies the user's correctness requirements.
+5. Chaos engineering validates your recovery automation, not your architecture; if you cannot automate the fix, the experiment is theater.
