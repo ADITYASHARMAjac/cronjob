@@ -63,3 +63,10 @@
 3. Reserve explicit `width` and `height` attributes or `aspect-ratio` CSS for all media to prevent layout shifts, as CLS is fundamentally a geometry contract violation between layout and paint.
 4. Offload non-UI work to Web Workers via `partytown` or Comlink to reclaim the main thread for INP-critical interactions, treating the main thread as a real-time UI runtime, not a compute cluster.
 5. Implement granular `Cache-Control: immutable` with content-hashed filenames for static assets, because cache invalidation is a solved problem only when the URL itself becomes the version key.
+
+### 🚀 [2026-10-06 09:00:15 UTC] Auto-Commit Entry
+1. Prioritize `font-display: swap` and preload critical web fonts to eliminate layout shifts (CLS) caused by invisible text rendering blocks.
+2. Implement stale-while-revalidate via `Cache-Control` headers to serve instant cached assets while asynchronously fetching fresh versions in the background.
+3. Offload heavy computation to Web Workers or `requestIdleCallback` to keep the main thread free for Interaction to Next Paint (INP) responsiveness.
+4. Use `speculationrules` API for prerendering high-confidence navigations, effectively turning LCP into a cache hit for subsequent page loads.
+5. Treat third-party scripts as hostile dependencies: load them via `<script type="module">` with `async`, sandbox in iframes, or defer until after `load` event.
