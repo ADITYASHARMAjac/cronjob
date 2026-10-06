@@ -70,3 +70,10 @@
 3. Offload heavy computation to Web Workers or `requestIdleCallback` to keep the main thread free for Interaction to Next Paint (INP) responsiveness.
 4. Use `speculationrules` API for prerendering high-confidence navigations, effectively turning LCP into a cache hit for subsequent page loads.
 5. Treat third-party scripts as hostile dependencies: load them via `<script type="module">` with `async`, sandbox in iframes, or defer until after `load` event.
+
+### 🚀 [2026-10-06 14:00:01 UTC] Auto-Commit Entry
+1. Ensure API endpoints are strictly idempotent to tolerate transient network retries safely.
+2. Decouple stateful services from compute workers to enable seamless horizontal autoscaling.
+3. Treat infrastructure as version-controlled code with reproducible declarative environments.
+4. Continuous testing in CI is cheaper than emergency hotfixing in production environments.
+5. Keep dependencies lean; auditing third-party vulnerabilities is a fundamental security duty.
