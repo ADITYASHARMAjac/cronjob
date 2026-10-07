@@ -91,3 +91,10 @@
 3. Use circuit breakers and bulkheads to isolate blast radius; a single downstream dependency must never cascade into a total outage.
 4. Prefer eventual consistency with conflict-free replicated data types (CRDTs) over distributed locks to maintain availability during partitions.
 5. Observability is not optional—emit structured logs, distributed traces, and SLO-burn alerts to detect silent data corruption before users do.
+
+### 🚀 [2026-10-07 14:00:18 UTC] Auto-Commit Entry
+1. Treat infrastructure as immutable cattle, not mutable pets, enforcing drift detection via GitOps reconciliation loops rather than manual SSH remediation.
+2. Pipeline stages must fail fast on security policy violations (SAST/DAST/SCA) using policy-as-code gates, preventing vulnerable artifacts from ever reaching a container registry.
+3. Optimize cloud spend by architecting for ephemeral workloads with spot instances and autoscaling, while reserving committed capacity strictly for stateful control planes.
+4. Observability requires structured, correlated logs, metrics, and traces emitted at the application level, not inferred from infrastructure dashboards after the fact.
+5. Automate rollback velocity to sub-minute levels using blue-green or canary deployments with automated health checks, making failure recovery a non-event rather than an incident.
