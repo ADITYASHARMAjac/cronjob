@@ -98,3 +98,10 @@
 3. Optimize cloud spend by architecting for ephemeral workloads with spot instances and autoscaling, while reserving committed capacity strictly for stateful control planes.
 4. Observability requires structured, correlated logs, metrics, and traces emitted at the application level, not inferred from infrastructure dashboards after the fact.
 5. Automate rollback velocity to sub-minute levels using blue-green or canary deployments with automated health checks, making failure recovery a non-event rather than an incident.
+
+### 🚀 [2026-10-07 20:00:19 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to bypass the preload scanner queue and eliminate the single biggest CLS culprit: late-discovered hero assets.
+2. Implement `stale-while-revalidate` on your CDN edge to serve instant cached HTML while asynchronously revalidating origin, turning dynamic pages into static-speed experiences without cache invalidation complexity.
+3. Shift third-party scripts to a Web Worker via Partytown to liberate the main thread for INP-critical interactions, accepting the serialization overhead as the tax for 60fps responsiveness.
+4. Adopt the `Cache-Control: immutable` directive with content-hashed filenames for all static assets, transforming browser cache hits into zero-round-trip victories that `max-age` alone cannot guarantee.
+5. Measure Interaction to Next Paint (INP) at the 75th percentile in the field, not lab Total Blocking Time, because synthetic main-thread idleness rarely reflects real-world input latency under device constraint.
