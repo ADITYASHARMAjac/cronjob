@@ -84,3 +84,10 @@
 3. Circuit breakers protect downstream dependencies, but bulkheads protect your own thread pools from cascading exhaustion.
 4. Consistency models are business contracts, not configuration flags; choose the weakest model that satisfies the user's correctness requirements.
 5. Chaos engineering validates your recovery automation, not your architecture; if you cannot automate the fix, the experiment is theater.
+
+### 🚀 [2026-10-07 09:00:06 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks drift arbitrarily.
+2. Implement idempotency keys on every mutating operation so retries become safe semantics rather than dangerous guesses.
+3. Use circuit breakers and bulkheads to isolate blast radius; a single downstream dependency must never cascade into a total outage.
+4. Prefer eventual consistency with conflict-free replicated data types (CRDTs) over distributed locks to maintain availability during partitions.
+5. Observability is not optional—emit structured logs, distributed traces, and SLO-burn alerts to detect silent data corruption before users do.
