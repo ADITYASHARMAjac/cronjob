@@ -105,3 +105,10 @@
 3. Shift third-party scripts to a Web Worker via Partytown to liberate the main thread for INP-critical interactions, accepting the serialization overhead as the tax for 60fps responsiveness.
 4. Adopt the `Cache-Control: immutable` directive with content-hashed filenames for all static assets, transforming browser cache hits into zero-round-trip victories that `max-age` alone cannot guarantee.
 5. Measure Interaction to Next Paint (INP) at the 75th percentile in the field, not lab Total Blocking Time, because synthetic main-thread idleness rarely reflects real-world input latency under device constraint.
+
+### 🚀 [2026-10-08 09:00:13 UTC] Auto-Commit Entry
+1. Prioritize `Cache-Control: immutable` with content-hashed filenames for static assets to eliminate revalidation round-trips entirely.
+2. Leverage `stale-while-revalidate` on HTML and API responses to serve instant cached content while asynchronously fetching fresh data in the background.
+3. Preload critical LCP resources (hero images, web fonts) via `<link rel="preload" as="image" fetchpriority="high">` to bypass the preload scanner latency.
+4. Reserve explicit `width`/`height` or `aspect-ratio` CSS on all media to prevent layout shifts (CLS) during progressive rendering.
+5. Offload non-UI work to Web Workers or `scheduler.yield()` to keep the main thread free for Interaction to Next Paint (INP) responsiveness.
