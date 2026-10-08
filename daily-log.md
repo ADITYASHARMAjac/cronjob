@@ -112,3 +112,10 @@
 3. Preload critical LCP resources (hero images, web fonts) via `<link rel="preload" as="image" fetchpriority="high">` to bypass the preload scanner latency.
 4. Reserve explicit `width`/`height` or `aspect-ratio` CSS on all media to prevent layout shifts (CLS) during progressive rendering.
 5. Offload non-UI work to Web Workers or `scheduler.yield()` to keep the main thread free for Interaction to Next Paint (INP) responsiveness.
+
+### 🚀 [2026-10-08 14:00:01 UTC] Auto-Commit Entry
+1. Design systems for graceful degradation: every distributed call must have explicit timeouts and retry budgets.
+2. Prefer immutable data structures in concurrent pipelines to eliminate race conditions without lock contention.
+3. Database indexes are not free; evaluate write amplification against read frequency during schema migrations.
+4. Write self-documenting code with clear domain nomenclature instead of relying on stale external wikis.
+5. Automate repetitive manual operations early: human memory is the most fragile component in production.
