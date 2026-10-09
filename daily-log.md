@@ -140,3 +140,10 @@
 3. Database indexes are not free; evaluate write amplification against read frequency during schema migrations.
 4. Write self-documenting code with clear domain nomenclature instead of relying on stale external wikis.
 5. Automate repetitive manual operations early: human memory is the most fragile component in production.
+
+### 🚀 [2026-10-09 20:00:16 UTC] Auto-Commit Entry
+1. Prefer structured concurrency over raw threads to enforce parent-child lifetime coupling and prevent resource leaks during partial failures.
+2. Backpressure is not optional; unbounded queues turn latency spikes into OOM kills, so apply flow control at every async boundary.
+3. Lock-free algorithms trade latency for throughput but require rigorous memory ordering semantics — acquire/release fences are not optional documentation.
+4. Async cancellation must be cooperative and idempotent; forcing thread termination corrupts invariants and leaves memory in undefined states.
+5. Object pooling reduces GC pressure only when allocation rate exceeds promotion thresholds; otherwise, it merely increases tenured heap fragmentation.
