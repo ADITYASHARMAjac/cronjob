@@ -161,3 +161,10 @@
 3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load, not the writer's keystrokes.
 4. Tests are not a quality gate—they are the executable specification that prevents architecture from rotting into legacy.
 5. Observability is not a feature you add later; it is a cross-cutting concern that dictates whether your system survives its first incident.
+
+### 🚀 [2026-10-10 20:00:29 UTC] Auto-Commit Entry
+1. Idempotency keys belong in the header, not the body, ensuring safe retries survive load balancer retries and client crashes alike.
+2. PUT must replace the entire resource representation, while PATCH applies a delta; confusing them breaks caching and client expectations.
+3. Return `202 Accepted` with a `Location` header for async operations, never `200 OK` with a pending status in the payload.
+4. Version via the `Accept` header (`application/vnd.myapi.v2+json`), not the URL, preserving URI stability and cache key integrity.
+5. Design for `GET` safety and `HEAD` parity first; if a read operation mutates state, your architecture is leaking side effects.
