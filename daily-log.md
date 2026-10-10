@@ -147,3 +147,10 @@
 3. Lock-free algorithms trade latency for throughput but require rigorous memory ordering semantics — acquire/release fences are not optional documentation.
 4. Async cancellation must be cooperative and idempotent; forcing thread termination corrupts invariants and leaves memory in undefined states.
 5. Object pooling reduces GC pressure only when allocation rate exceeds promotion thresholds; otherwise, it merely increases tenured heap fragmentation.
+
+### 🚀 [2026-10-10 09:00:03 UTC] Auto-Commit Entry
+1. A covering index transforms a random I/O storm into a sequential memory scan by satisfying the query entirely from the B-tree leaves.
+2. Write queries to filter on the leading columns of composite indexes; the optimizer cannot seek past a range predicate to use subsequent key columns.
+3. Statistics are the optimizer's eyes—stale histograms on skewed data cause catastrophic plan choices like nested loops against millions of rows.
+4. Index maintenance is write amplification; every secondary index doubles the cost of inserts, so delete unused indexes before they delete your throughput.
+5. Parameter sniffing locks a plan to the first execution's cardinality; use `OPTIMIZE FOR UNKNOWN` or `RECOMPILE` when parameter distributions vary wildly.
