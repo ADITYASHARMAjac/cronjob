@@ -154,3 +154,10 @@
 3. Statistics are the optimizer's eyes—stale histograms on skewed data cause catastrophic plan choices like nested loops against millions of rows.
 4. Index maintenance is write amplification; every secondary index doubles the cost of inserts, so delete unused indexes before they delete your throughput.
 5. Parameter sniffing locks a plan to the first execution's cardinality; use `OPTIMIZE FOR UNKNOWN` or `RECOMPILE` when parameter distributions vary wildly.
+
+### 🚀 [2026-10-10 14:00:10 UTC] Auto-Commit Entry
+1. Architecture is the art of deciding what *not* to build, deferring irreversible decisions until the last responsible moment.
+2. Coupling is inevitable; the discipline lies in ensuring it flows toward stability and away from volatility.
+3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load, not the writer's keystrokes.
+4. Tests are not a quality gate—they are the executable specification that prevents architecture from rotting into legacy.
+5. Observability is not a feature you add later; it is a cross-cutting concern that dictates whether your system survives its first incident.
