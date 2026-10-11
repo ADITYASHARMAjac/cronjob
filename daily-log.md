@@ -182,3 +182,10 @@
 3. Observability requires structured logs, metrics, and traces correlated by a single request ID; without distributed context, debugging microservices is forensic archaeology.
 4. Secrets management must shift left into the CI pipeline via short-lived, dynamic credentials injected at runtime, eliminating static keys from source control and build logs.
 5. Cost efficiency in the cloud is an architectural constraint, not a finance review; enforce right-sizing and auto-scaling policies through policy-as-code guardrails in the merge gate.
+
+### 🚀 [2026-10-11 20:00:06 UTC] Auto-Commit Entry
+1. Design for partial failure by making idempotency a first-class citizen at every API boundary, not an afterthought.
+2. Observability without correlated traces, metrics, and structured logs is just expensive noise during an outage.
+3. Circuit breakers protect downstream dependencies, but bulkheads protect your own thread pools from cascading exhaustion.
+4. Chase consistency only where business invariants demand it; eventual consistency with conflict-free replicated data types buys you availability elsewhere.
+5. Chaos engineering is not breaking things randomly; it is verifying that your fallback paths actually execute under realistic load.
