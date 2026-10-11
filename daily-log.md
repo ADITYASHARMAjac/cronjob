@@ -168,3 +168,10 @@
 3. Return `202 Accepted` with a `Location` header for async operations, never `200 OK` with a pending status in the payload.
 4. Version via the `Accept` header (`application/vnd.myapi.v2+json`), not the URL, preserving URI stability and cache key integrity.
 5. Design for `GET` safety and `HEAD` parity first; if a read operation mutates state, your architecture is leaking side effects.
+
+### 🚀 [2026-10-11 09:00:22 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks drift arbitrarily.
+2. Idempotency keys are the single most effective primitive for achieving exactly-once semantics over unreliable transports.
+3. A circuit breaker prevents cascade failures, but only if the fallback path degrades functionality rather than masking the outage.
+4. Observability requires structured logs, distributed traces, and metrics with high-cardinality dimensions to debug novel failure modes.
+5. Chaos engineering validates your runbooks, not your code; automate the remediation of the failures you inject.
