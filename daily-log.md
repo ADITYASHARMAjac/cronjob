@@ -203,3 +203,10 @@
 3. Tests are executable specifications, not safety nets; if a test fails and you don't know *why* the business logic broke within seconds, the test has negative value.
 4. Flaky tests are corrupted data in your CI pipeline; quarantine them immediately, for a build that lies erodes trust faster than a build that breaks.
 5. Invest in "locality of behavior" so that reading a single file answers "what happens here?" without requiring a mental simulation of five microservices and a message bus.
+
+### 🚀 [2026-10-12 20:00:02 UTC] Auto-Commit Entry
+1. Cache invalidation requires deterministic naming conventions and explicit time-to-live policies.
+2. Observe three pillars of telemetry: structured logs, dimensional metrics, and distributed traces.
+3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
+4. Profile real production memory profiles before applying premature memory or CPU optimizations.
+5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
