@@ -196,3 +196,10 @@
 3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load, not the writer's keystrokes.
 4. Tests are executable specifications that prevent regression; if they require debugging to understand a failure, they have failed their primary purpose.
 5. Observability is not a feature you add later—it is the nervous system you design in, distinguishing a black box from a manageable system.
+
+### 🚀 [2026-10-12 14:00:08 UTC] Auto-Commit Entry
+1. Optimize for cognitive load reduction, not keystroke speed; the fastest code is the architecture you never had to write because the domain model was correct.
+2. Debugging is the scientific method applied under duress: form a falsifiable hypothesis, instrument the minimal probe, and reject intuition that cannot survive a stack trace.
+3. Tests are executable specifications, not safety nets; if a test fails and you don't know *why* the business logic broke within seconds, the test has negative value.
+4. Flaky tests are corrupted data in your CI pipeline; quarantine them immediately, for a build that lies erodes trust faster than a build that breaks.
+5. Invest in "locality of behavior" so that reading a single file answers "what happens here?" without requiring a mental simulation of five microservices and a message bus.
