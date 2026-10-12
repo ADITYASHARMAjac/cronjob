@@ -189,3 +189,10 @@
 3. Circuit breakers protect downstream dependencies, but bulkheads protect your own thread pools from cascading exhaustion.
 4. Chase consistency only where business invariants demand it; eventual consistency with conflict-free replicated data types buys you availability elsewhere.
 5. Chaos engineering is not breaking things randomly; it is verifying that your fallback paths actually execute under realistic load.
+
+### 🚀 [2026-10-12 09:00:07 UTC] Auto-Commit Entry
+1. Architecture is the art of deciding what *not* to build, deferring irreversible decisions until the last responsible moment.
+2. Coupling is inevitable; the discipline lies in ensuring it flows toward stability and away from volatility.
+3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load, not the writer's keystrokes.
+4. Tests are executable specifications that prevent regression; if they require debugging to understand a failure, they have failed their primary purpose.
+5. Observability is not a feature you add later—it is the nervous system you design in, distinguishing a black box from a manageable system.
