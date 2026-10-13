@@ -210,3 +210,10 @@
 3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
 4. Profile real production memory profiles before applying premature memory or CPU optimizations.
 5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
+
+### 🚀 [2026-10-13 09:00:55 UTC] Auto-Commit Entry
+1. Treat infrastructure as software: apply version control, code review, and automated testing to Terraform or CloudFormation with the same rigor as application logic.
+2. Optimize for mean time to recovery (MTTR) over mean time between failures (MTBF) by investing in immutable deployments and instant rollback capabilities.
+3. Eliminate "works on my machine" drift by enforcing contract testing between services and infrastructure definitions in every pipeline stage.
+4. Shift security left by embedding policy-as-code (OPA/Rego) gates directly into the merge request flow, blocking non-compliant resources before they reach cloud APIs.
+5. Measure pipeline value by "lead time for changes" and "change failure rate," not pipeline duration; a fast pipeline deploying bugs is a liability, not an asset.
