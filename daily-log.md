@@ -224,3 +224,10 @@
 3. Circuit breakers prevent cascade failures, but only if fallback logic degrades functionality rather than masking errors.
 4. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug partial system degradation.
 5. Chaos engineering validates resilience hypotheses; if you haven't killed a dependency in staging, you don't know your blast radius.
+
+### 🚀 [2026-10-13 20:00:25 UTC] Auto-Commit Entry
+1. Design for partial failure by making idempotency a first-class citizen at every API boundary, not an afterthought.
+2. Observability without correlated distributed tracing and structured logging is just expensive noise during an outage.
+3. Circuit breakers protect downstream dependencies, but bulkheads prevent a single misbehaving tenant from sinking the entire fleet.
+4. Consistency models are business decisions disguised as engineering choices; choose the weakest model your correctness invariants can tolerate.
+5. Chaos engineering validates your runbooks, not your code; automate the remediation paths you discover before the next incident.
