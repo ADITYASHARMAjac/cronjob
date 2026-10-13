@@ -217,3 +217,10 @@
 3. Eliminate "works on my machine" drift by enforcing contract testing between services and infrastructure definitions in every pipeline stage.
 4. Shift security left by embedding policy-as-code (OPA/Rego) gates directly into the merge request flow, blocking non-compliant resources before they reach cloud APIs.
 5. Measure pipeline value by "lead time for changes" and "change failure rate," not pipeline duration; a fast pipeline deploying bugs is a liability, not an asset.
+
+### 🚀 [2026-10-13 14:00:07 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks drift arbitrarily.
+2. Idempotency keys are the only reliable contract for exactly-once semantics across unreliable transport layers.
+3. Circuit breakers prevent cascade failures, but only if fallback logic degrades functionality rather than masking errors.
+4. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug partial system degradation.
+5. Chaos engineering validates resilience hypotheses; if you haven't killed a dependency in staging, you don't know your blast radius.
