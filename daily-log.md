@@ -238,3 +238,10 @@
 3. Version APIs via the `Accept` header (`application/vnd.myapi.v2+json`), not the URL, to preserve URI permanence and enable content negotiation.
 4. Return `202 Accepted` with a `Location` header for async operations, polling the status resource until the terminal `303 See Other` redirects to the result.
 5. Enforce `If-Match` ETag validation on every write endpoint to implement optimistic locking and prevent lost updates in distributed systems.
+
+### 🚀 [2026-10-14 14:00:06 UTC] Auto-Commit Entry
+1. Idempotency keys must be scoped to the consumer, not the resource, to safely handle retries across distributed clients without collision.
+2. PUT requires full resource replacement; use PATCH with JSON Merge Patch or RFC 6902 for partial updates to avoid accidental data loss.
+3. Never expose internal database IDs in URIs; use opaque, globally unique identifiers (ULIDs/UUIDs) to decouple API contracts from storage implementations.
+4. Return `202 Accepted` with a `Location` header polling URL for long-running operations instead of blocking HTTP connections or using webhooks.
+5. Version via media type (`application/vnd.company.v2+json`) in the `Accept` header, not the URL, to preserve URI permanence and cacheability.
