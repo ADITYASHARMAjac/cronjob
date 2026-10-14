@@ -245,3 +245,10 @@
 3. Never expose internal database IDs in URIs; use opaque, globally unique identifiers (ULIDs/UUIDs) to decouple API contracts from storage implementations.
 4. Return `202 Accepted` with a `Location` header polling URL for long-running operations instead of blocking HTTP connections or using webhooks.
 5. Version via media type (`application/vnd.company.v2+json`) in the `Accept` header, not the URL, to preserve URI permanence and cacheability.
+
+### 🚀 [2026-10-14 20:00:20 UTC] Auto-Commit Entry
+1. Design your APIs for the consumer's mental model, not your database schema, because internal leakage creates brittle contracts that resist evolution.
+2. True idempotency requires deterministic state transitions, not just duplicate suppression, so ensure PUT and DELETE operations converge to the same result regardless of retry count.
+3. Use `POST` for non-idempotent actions and complex searches, but reserve `PUT` for full resource replacement and `PATCH` for partial updates to honor HTTP semantics precisely.
+4. Embed the idempotency key in the request header, not the body, allowing infrastructure layers to deduplicate safely without parsing domain-specific payloads.
+5. Version via the `Accept` header (media type versioning) rather than URL paths to preserve URI stability and enable seamless content negotiation across clients.
