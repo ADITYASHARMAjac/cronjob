@@ -231,3 +231,10 @@
 3. Circuit breakers protect downstream dependencies, but bulkheads prevent a single misbehaving tenant from sinking the entire fleet.
 4. Consistency models are business decisions disguised as engineering choices; choose the weakest model your correctness invariants can tolerate.
 5. Chaos engineering validates your runbooks, not your code; automate the remediation paths you discover before the next incident.
+
+### 🚀 [2026-10-14 09:00:11 UTC] Auto-Commit Entry
+1. Design idempotency keys at the business transaction layer, not the HTTP layer, to survive client retries and infrastructure restarts alike.
+2. Treat PUT as full resource replacement and PATCH as partial mutation; confusing them corrupts state and breaks client caching assumptions.
+3. Version APIs via the `Accept` header (`application/vnd.myapi.v2+json`), not the URL, to preserve URI permanence and enable content negotiation.
+4. Return `202 Accepted` with a `Location` header for async operations, polling the status resource until the terminal `303 See Other` redirects to the result.
+5. Enforce `If-Match` ETag validation on every write endpoint to implement optimistic locking and prevent lost updates in distributed systems.
