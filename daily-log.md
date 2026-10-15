@@ -259,3 +259,10 @@
 3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
 4. Profile real production memory profiles before applying premature memory or CPU optimizations.
 5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
+
+### 🚀 [2026-10-15 14:00:13 UTC] Auto-Commit Entry
+1. Design idempotency keys at the application layer, not the infrastructure layer, to survive load balancer retries and client-side network flakiness simultaneously.
+2. Treat PUT as full resource replacement and PATCH as partial mutation; conflating them breaks client caching assumptions and violates HTTP semantics.
+3. Version APIs via the `Accept` header (`application/vnd.myapp.v2+json`) rather than URL paths to preserve URI stability and enable content negotiation.
+4. Return `202 Accepted` with a `Location` header for long-running async operations, polling the status resource until `200 OK` or `303 See Other` resolves the final state.
+5. Enforce strict `Content-Type` validation on ingestion; rejecting `application/json` payloads sent as `text/plain` prevents parser differentials and injection vectors.
