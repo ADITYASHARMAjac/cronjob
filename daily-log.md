@@ -252,3 +252,10 @@
 3. Use `POST` for non-idempotent actions and complex searches, but reserve `PUT` for full resource replacement and `PATCH` for partial updates to honor HTTP semantics precisely.
 4. Embed the idempotency key in the request header, not the body, allowing infrastructure layers to deduplicate safely without parsing domain-specific payloads.
 5. Version via the `Accept` header (media type versioning) rather than URL paths to preserve URI stability and enable seamless content negotiation across clients.
+
+### 🚀 [2026-10-15 09:00:01 UTC] Auto-Commit Entry
+1. Cache invalidation requires deterministic naming conventions and explicit time-to-live policies.
+2. Observe three pillars of telemetry: structured logs, dimensional metrics, and distributed traces.
+3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
+4. Profile real production memory profiles before applying premature memory or CPU optimizations.
+5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
