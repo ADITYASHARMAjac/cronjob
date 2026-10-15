@@ -266,3 +266,10 @@
 3. Version APIs via the `Accept` header (`application/vnd.myapp.v2+json`) rather than URL paths to preserve URI stability and enable content negotiation.
 4. Return `202 Accepted` with a `Location` header for long-running async operations, polling the status resource until `200 OK` or `303 See Other` resolves the final state.
 5. Enforce strict `Content-Type` validation on ingestion; rejecting `application/json` payloads sent as `text/plain` prevents parser differentials and injection vectors.
+
+### 🚀 [2026-10-15 20:00:06 UTC] Auto-Commit Entry
+1. Design your API contracts around business capabilities, not database schemas, to prevent leaky abstractions that couple clients to internal implementation details.
+2. Idempotency keys are mandatory for all non-read operations; generate them client-side and enforce server-side deduplication windows to survive network retries without duplicate side effects.
+3. Use `PUT` for full resource replacement and `PATCH` for partial updates, but never allow `PATCH` to create resources—return `404` if the target URI does not exist.
+4. Version APIs via the URL path (`/v1/`) for breaking changes and the `Accept` header for representation negotiation; never rely solely on custom headers for version routing.
+5. Treat `GET` as strictly safe and cacheable—never tunnel mutation logic through query parameters or request bodies, as intermediaries will silently break your semantics.
