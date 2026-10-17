@@ -301,3 +301,10 @@
 3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
 4. Profile real production memory profiles before applying premature memory or CPU optimizations.
 5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
+
+### 🚀 [2026-10-17 14:00:01 UTC] Auto-Commit Entry
+1. Design systems for graceful degradation: every distributed call must have explicit timeouts and retry budgets.
+2. Prefer immutable data structures in concurrent pipelines to eliminate race conditions without lock contention.
+3. Database indexes are not free; evaluate write amplification against read frequency during schema migrations.
+4. Write self-documenting code with clear domain nomenclature instead of relying on stale external wikis.
+5. Automate repetitive manual operations early: human memory is the most fragile component in production.
