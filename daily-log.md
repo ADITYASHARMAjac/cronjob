@@ -294,3 +294,10 @@
 3. Database indexes are not free; evaluate write amplification against read frequency during schema migrations.
 4. Write self-documenting code with clear domain nomenclature instead of relying on stale external wikis.
 5. Automate repetitive manual operations early: human memory is the most fragile component in production.
+
+### 🚀 [2026-10-17 09:00:01 UTC] Auto-Commit Entry
+1. Cache invalidation requires deterministic naming conventions and explicit time-to-live policies.
+2. Observe three pillars of telemetry: structured logs, dimensional metrics, and distributed traces.
+3. Favor boring, battle-tested technologies in core critical paths over experimental frameworks.
+4. Profile real production memory profiles before applying premature memory or CPU optimizations.
+5. Small, atomic commits pushed frequently reduce merge conflicts and accelerate deployment velocity.
