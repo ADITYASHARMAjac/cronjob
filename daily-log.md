@@ -315,3 +315,10 @@
 3. Treat infrastructure as version-controlled code with reproducible declarative environments.
 4. Continuous testing in CI is cheaper than emergency hotfixing in production environments.
 5. Keep dependencies lean; auditing third-party vulnerabilities is a fundamental security duty.
+
+### 🚀 [2026-10-18 09:00:04 UTC] Auto-Commit Entry
+1. Design APIs for the consumer's domain language, not your database schema, to prevent leaky abstractions and brittle contracts.
+2. True idempotency requires the server to safely handle duplicate requests by making state transitions deterministic, not merely returning the same response code.
+3. Use `PUT` for full resource replacement with a known identifier and `PATCH` for partial updates, but never conflate the two semantics.
+4. Embed hypermedia links (HATEOAS) in responses so clients navigate state transitions dynamically rather than hardcoding fragile URL construction logic.
+5. Version APIs via the `Accept` header media type, not the URL path, to preserve resource identity and enable seamless content negotiation.
