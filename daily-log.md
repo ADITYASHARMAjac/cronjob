@@ -329,3 +329,10 @@
 3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load.
 4. A service boundary drawn around data ownership survives scaling; one drawn around features fractures under it.
 5. Technical debt is not bad code, it is a deliberate loan against future velocity that requires a documented repayment plan.
+
+### 🚀 [2026-10-18 20:00:08 UTC] Auto-Commit Entry
+1. Structured concurrency scopes transform unmanageable thread lifecycles into deterministic, cancellable hierarchies that prevent resource leaks by construction.
+2. Backpressure is not optional; unbounded queues between producers and consumers inevitably collapse latency SLAs and trigger OOM kills under load.
+3. Async functions that capture references without explicit lifetime bounds silently extend object graphs, defeating generational GC heuristics and fragmenting the heap.
+4. Lock-free algorithms trade contention for complexity; validate throughput gains against cache-line bouncing costs before abandoning mutexes for atomic CAS loops.
+5. Memory ownership must be architecturally explicit—whether via borrow checking, reference counting, or arena allocation—because implicit sharing is the root cause of both data races and premature deallocation.
