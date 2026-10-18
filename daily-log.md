@@ -322,3 +322,10 @@
 3. Use `PUT` for full resource replacement with a known identifier and `PATCH` for partial updates, but never conflate the two semantics.
 4. Embed hypermedia links (HATEOAS) in responses so clients navigate state transitions dynamically rather than hardcoding fragile URL construction logic.
 5. Version APIs via the `Accept` header media type, not the URL path, to preserve resource identity and enable seamless content negotiation.
+
+### 🚀 [2026-10-18 14:00:03 UTC] Auto-Commit Entry
+1. Architecture is the art of deferring decisions until the cost of change exceeds the cost of design.
+2. Coupling is inevitable; the discipline lies in ensuring it flows strictly toward stability, never volatility.
+3. Code is read by humans exponentially more than executed by machines; optimize for the reader's cognitive load.
+4. A service boundary drawn around data ownership survives scaling; one drawn around features fractures under it.
+5. Technical debt is not bad code, it is a deliberate loan against future velocity that requires a documented repayment plan.
