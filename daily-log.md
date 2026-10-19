@@ -336,3 +336,10 @@
 3. Async functions that capture references without explicit lifetime bounds silently extend object graphs, defeating generational GC heuristics and fragmenting the heap.
 4. Lock-free algorithms trade contention for complexity; validate throughput gains against cache-line bouncing costs before abandoning mutexes for atomic CAS loops.
 5. Memory ownership must be architecturally explicit—whether via borrow checking, reference counting, or arena allocation—because implicit sharing is the root cause of both data races and premature deallocation.
+
+### 🚀 [2026-10-19 09:00:25 UTC] Auto-Commit Entry
+1. A covering index transforms a random I/O lookup into a sequential index scan, often eliminating the heap fetch entirely for read-heavy workloads.
+2. Write the query for the index you have, not the index you wish you had; predicate order and function wrapping dictate SARGability more than cardinality estimates.
+3. High cardinality columns belong first in composite indexes only when leading columns filter to a tight range; otherwise, put equality columns before range columns to maximize B-tree pruning.
+4. `EXPLAIN ANALYZE` lies when statistics are stale; always verify `actual rows` vs `estimated rows` before trusting the planner's join strategy or index choice.
+5. Partial indexes on boolean flags or status enums shrink the B-tree height and write amplification dramatically compared to full-table indexes on low-selectivity columns.
