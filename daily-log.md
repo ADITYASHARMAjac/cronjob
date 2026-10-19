@@ -343,3 +343,10 @@
 3. High cardinality columns belong first in composite indexes only when leading columns filter to a tight range; otherwise, put equality columns before range columns to maximize B-tree pruning.
 4. `EXPLAIN ANALYZE` lies when statistics are stale; always verify `actual rows` vs `estimated rows` before trusting the planner's join strategy or index choice.
 5. Partial indexes on boolean flags or status enums shrink the B-tree height and write amplification dramatically compared to full-table indexes on low-selectivity columns.
+
+### 🚀 [2026-10-19 14:01:04 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to bypass the preload scanner queue and eliminate the critical render path bottleneck.
+2. Adopt a stale-while-revalidate strategy via `Cache-Control: max-age=0, stale-while-revalidate=86400` to serve instant cached responses while asynchronously refreshing assets in the background.
+3. Specify explicit `width` and `height` attributes on all media elements to reserve layout space during parsing, preventing CLS shifts caused by late-loading dimension discovery.
+4. Partition third-party scripts into a dedicated Web Worker using Partytown to reclaim main-thread bandwidth for INP-critical user interactions without sacrificing analytics fidelity.
+5. Implement the `Speculation Rules API` with `eagerness: "moderate"` for instant navigations on hover, turning perceived latency into a predictive cache warm-up rather than a network waterfall.
