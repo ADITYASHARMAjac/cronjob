@@ -350,3 +350,10 @@
 3. Specify explicit `width` and `height` attributes on all media elements to reserve layout space during parsing, preventing CLS shifts caused by late-loading dimension discovery.
 4. Partition third-party scripts into a dedicated Web Worker using Partytown to reclaim main-thread bandwidth for INP-critical user interactions without sacrificing analytics fidelity.
 5. Implement the `Speculation Rules API` with `eagerness: "moderate"` for instant navigations on hover, turning perceived latency into a predictive cache warm-up rather than a network waterfall.
+
+### 🚀 [2026-10-19 20:00:06 UTC] Auto-Commit Entry
+1. Idempotency keys on mutation endpoints are the only reliable defense against the inevitable duplicate requests caused by network retries and impatient users.
+2. PUT must replace the entire resource representation, while PATCH should describe a delta; conflating them breaks client caching and conditional request semantics.
+3. Return `202 Accepted` with a polling `Location` header for long-running operations instead of holding connections open, preserving horizontal scalability.
+4. Version APIs via the `Accept` header (`application/vnd.company.v2+json`) rather than URL paths to maintain clean, cacheable resource identifiers.
+5. Design error responses as first-class citizens with stable `type` URIs and `instance` IDs so clients can programmatically handle failures without parsing human-readable strings.
