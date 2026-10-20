@@ -357,3 +357,10 @@
 3. Return `202 Accepted` with a polling `Location` header for long-running operations instead of holding connections open, preserving horizontal scalability.
 4. Version APIs via the `Accept` header (`application/vnd.company.v2+json`) rather than URL paths to maintain clean, cacheable resource identifiers.
 5. Design error responses as first-class citizens with stable `type` URIs and `instance` IDs so clients can programmatically handle failures without parsing human-readable strings.
+
+### 🚀 [2026-10-20 09:00:03 UTC] Auto-Commit Entry
+1. Composite indexes must mirror the query's equality, range, and sort columns in exact left-to-right order to avoid filesort operations.
+2. Covering indexes eliminate heap fetches entirely by satisfying the query solely from the B-tree leaf pages.
+3. Statistics drift silently degrades plan quality; schedule `ANALYZE` or auto-update thresholds before the optimizer chooses a full scan over a seek.
+4. Write-heavy workloads demand fill-factor tuning and append-only patterns to prevent page splits from fragmenting the clustered index.
+5. Correlated subqueries often mask as logic but execute as nested loops; rewrite them as lateral joins or window functions for set-based throughput.
