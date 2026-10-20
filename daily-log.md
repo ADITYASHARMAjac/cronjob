@@ -364,3 +364,10 @@
 3. Statistics drift silently degrades plan quality; schedule `ANALYZE` or auto-update thresholds before the optimizer chooses a full scan over a seek.
 4. Write-heavy workloads demand fill-factor tuning and append-only patterns to prevent page splits from fragmenting the clustered index.
 5. Correlated subqueries often mask as logic but execute as nested loops; rewrite them as lateral joins or window functions for set-based throughput.
+
+### 🚀 [2026-10-20 14:00:21 UTC] Auto-Commit Entry
+1. Design for partial failure by making every dependency timeout, retry with jitter, and circuit-break independently.
+2. Idempotency keys are the only safe contract for at-least-once delivery; never rely on exactly-once semantics.
+3. Observability requires structured logs, metrics, and traces correlated by a single request ID across every service boundary.
+4. Chaos engineering is not testing; it is the continuous verification that your fallback paths actually execute under load.
+5. Capacity planning must account for the "thundering herd" during recovery; scale-down policies are as critical as scale-up.
