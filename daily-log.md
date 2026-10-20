@@ -371,3 +371,10 @@
 3. Observability requires structured logs, metrics, and traces correlated by a single request ID across every service boundary.
 4. Chaos engineering is not testing; it is the continuous verification that your fallback paths actually execute under load.
 5. Capacity planning must account for the "thundering herd" during recovery; scale-down policies are as critical as scale-up.
+
+### 🚀 [2026-10-20 20:00:11 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to bypass the preload scanner queue and eliminate the single largest driver of LCP variance.
+2. Adopt a stale-while-revalidate strategy via `Cache-Control: max-age=0, must-revalidate, stale-while-revalidate=86400` to serve instant cached responses while asynchronously refreshing assets in the background.
+3. Reserve explicit layout space using `aspect-ratio` CSS on images and `min-height` on ad slots to mathematically guarantee a CLS score of zero regardless of network latency.
+4. Offload heavy computation to Web Workers using `OffscreenCanvas` or Comlink to keep the main thread free for Interaction to Next Paint (INP) responsiveness under 200ms.
+5. Implement granular cache partitioning with `Vary: Accept-Encoding, User-Agent` and immutable content hashing in filenames to maximize CDN hit ratios without risking stale asset delivery.
