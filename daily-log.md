@@ -392,3 +392,10 @@
 3. Return `202 Accepted` with a `Location` header for async operations, polling that URL until it resolves to `303 See Other` pointing to the created resource.
 4. Version APIs via the `Accept` header (`application/vnd.company.v2+json`), not URLs, preserving URI opacity and enabling content negotiation for seamless migrations.
 5. Never expose internal database IDs in URLs; use opaque, globally unique identifiers (ULIDs/UUIDv7) to prevent enumeration attacks and decouple storage from contract.
+
+### 🚀 [2026-10-21 20:00:04 UTC] Auto-Commit Entry
+1. Prefer structured concurrency over raw threads to enforce parent-child lifecycles and eliminate orphaned tasks leaking resources.
+2. Backpressure is not optional; unbounded queues between producers and consumers inevitably cause OOM kills under load spikes.
+3. Async functions are state machines — blocking calls inside them starve the executor and collapse throughput for the entire application.
+4. Lock-free algorithms trade latency for complexity; verify contention profiles before paying the cognitive tax of memory ordering semantics.
+5. Object pooling reduces GC pressure but introduces shared mutable state; measure allocation rates before optimizing the happy path.
