@@ -378,3 +378,10 @@
 3. Reserve explicit layout space using `aspect-ratio` CSS on images and `min-height` on ad slots to mathematically guarantee a CLS score of zero regardless of network latency.
 4. Offload heavy computation to Web Workers using `OffscreenCanvas` or Comlink to keep the main thread free for Interaction to Next Paint (INP) responsiveness under 200ms.
 5. Implement granular cache partitioning with `Vary: Accept-Encoding, User-Agent` and immutable content hashing in filenames to maximize CDN hit ratios without risking stale asset delivery.
+
+### 🚀 [2026-10-21 09:00:04 UTC] Auto-Commit Entry
+1. A covering index transforms a random I/O lookup into a sequential index scan, often eliminating the need to touch the heap entirely.
+2. Write queries to filter on the leading column of a composite index first; the optimizer cannot efficiently seek on the second column if the first is missing or range-scanned.
+3. Over-indexing write-heavy tables shifts latency from reads to writes, bloating the buffer pool and increasing WAL volume for every INSERT, UPDATE, and DELETE.
+4. Statistics are the optimizer's eyes; stale histograms on skewed data distributions cause catastrophic plan choices like nested loops against millions of rows instead of hash joins.
+5. An index seek on a non-sargable predicate (e.g., `WHERE YEAR(date) = 2023`) is impossible; always rewrite to range predicates (`WHERE date >= '2023-01-01' AND date < '2024-01-01'`) to unlock index usage.
