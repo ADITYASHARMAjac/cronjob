@@ -385,3 +385,10 @@
 3. Over-indexing write-heavy tables shifts latency from reads to writes, bloating the buffer pool and increasing WAL volume for every INSERT, UPDATE, and DELETE.
 4. Statistics are the optimizer's eyes; stale histograms on skewed data distributions cause catastrophic plan choices like nested loops against millions of rows instead of hash joins.
 5. An index seek on a non-sargable predicate (e.g., `WHERE YEAR(date) = 2023`) is impossible; always rewrite to range predicates (`WHERE date >= '2023-01-01' AND date < '2024-01-01'`) to unlock index usage.
+
+### 🚀 [2026-10-21 14:00:14 UTC] Auto-Commit Entry
+1. Idempotency keys belong on mutating requests, not endpoints, allowing safe retries without server-side deduplication logic bleeding into business layers.
+2. PUT must replace the entire resource representation, while PATCH applies a delta; confusing them breaks client caching assumptions and violates the uniform interface constraint.
+3. Return `202 Accepted` with a `Location` header for async operations, polling that URL until it resolves to `303 See Other` pointing to the created resource.
+4. Version APIs via the `Accept` header (`application/vnd.company.v2+json`), not URLs, preserving URI opacity and enabling content negotiation for seamless migrations.
+5. Never expose internal database IDs in URLs; use opaque, globally unique identifiers (ULIDs/UUIDv7) to prevent enumeration attacks and decouple storage from contract.
