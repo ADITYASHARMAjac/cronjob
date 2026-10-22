@@ -399,3 +399,10 @@
 3. Async functions are state machines — blocking calls inside them starve the executor and collapse throughput for the entire application.
 4. Lock-free algorithms trade latency for complexity; verify contention profiles before paying the cognitive tax of memory ordering semantics.
 5. Object pooling reduces GC pressure but introduces shared mutable state; measure allocation rates before optimizing the happy path.
+
+### 🚀 [2026-10-22 09:00:06 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks are unsynchronized.
+2. Idempotency keys are the only reliable contract for exactly-once semantics across retry storms and duplicate requests.
+3. Circuit breakers protect downstream dependencies, but bulkheads prevent a single failing tenant from sinking the entire fleet.
+4. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug partial degradation in production.
+5. Chaos engineering is not a testing phase; it is a continuous verification discipline that validates your fallback paths before users do.
