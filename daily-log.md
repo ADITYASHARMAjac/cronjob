@@ -413,3 +413,10 @@
 3. Observability is not monitoring; emit structured logs, distributed traces, and business metrics as first-class artifacts of the build process.
 4. Optimize cloud spend by architecting for ephemeral workloads—leverage spot instances for CI runners and scale-to-zero for preview environments.
 5. Gate promotions on policy-as-code (OPA/Rego) rather than manual approvals to enforce security, cost, and compliance guardrails at pipeline velocity.
+
+### 🚀 [2026-10-22 20:00:12 UTC] Auto-Commit Entry
+1. Prefer structured concurrency over raw threads to enforce lifecycle hierarchy and prevent resource leaks when parent tasks fail.
+2. Async functions should be cancellation-safe by default; never hold locks across `.await` points or the scheduler will deadlock your throughput.
+3. Backpressure is a memory management strategy: apply flow control at boundaries rather than buffering unbounded queues that trigger OOM kills.
+4. Pinning futures in Rust or using `stackalloc` in C# eliminates heap fragmentation for high-frequency state machines, turning latency spikes into deterministic costs.
+5. False sharing destroys scalability silently; align hot atomic counters to cache lines (64 bytes) or use thread-local aggregation with periodic reduction.
