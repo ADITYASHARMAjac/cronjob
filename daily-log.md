@@ -420,3 +420,10 @@
 3. Backpressure is a memory management strategy: apply flow control at boundaries rather than buffering unbounded queues that trigger OOM kills.
 4. Pinning futures in Rust or using `stackalloc` in C# eliminates heap fragmentation for high-frequency state machines, turning latency spikes into deterministic costs.
 5. False sharing destroys scalability silently; align hot atomic counters to cache lines (64 bytes) or use thread-local aggregation with periodic reduction.
+
+### 🚀 [2026-10-23 09:00:17 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to override browser scanner heuristics and eliminate the critical render path bottleneck.
+2. Implement `stale-while-revalidate` in your `Cache-Control` headers to serve instant cached responses while asynchronously refreshing assets, decoupling user latency from origin health.
+3. Shift layout stability burden to CSS by reserving explicit `aspect-ratio` boxes for media and ads, preventing CLS spikes without JavaScript layout thrashing.
+4. Treat Third-Party scripts as untrusted tenants: isolate them via `Partytown` web workers or strict `Content-Security-Policy` sandboxing to protect Main Thread responsiveness (INP).
+5. Measure Real User Monitoring (RUM) percentiles (p75) rather than synthetic averages; a fast median masks the long-tail latency destroying your conversion rates.
