@@ -427,3 +427,10 @@
 3. Shift layout stability burden to CSS by reserving explicit `aspect-ratio` boxes for media and ads, preventing CLS spikes without JavaScript layout thrashing.
 4. Treat Third-Party scripts as untrusted tenants: isolate them via `Partytown` web workers or strict `Content-Security-Policy` sandboxing to protect Main Thread responsiveness (INP).
 5. Measure Real User Monitoring (RUM) percentiles (p75) rather than synthetic averages; a fast median masks the long-tail latency destroying your conversion rates.
+
+### 🚀 [2026-10-23 14:00:22 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, latency is variable, and partial failure is the only guaranteed state.
+2. Idempotency keys are cheaper than distributed transactions; make every mutating operation safely retryable without coordination.
+3. Observability without correlated tracing across service boundaries is just expensive logging; invest in context propagation before you need it.
+4. Circuit breakers prevent cascade failures, but only if timeouts are calibrated faster than your clients' patience and slower than your 99th percentile.
+5. Chaos engineering validates your runbooks, not your code; automate the remediation of the failures you inject, or you are just creating outages.
