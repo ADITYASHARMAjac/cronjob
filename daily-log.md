@@ -441,3 +441,10 @@
 3. Implement progressive delivery with feature flags and canary analysis to decouple deployment risk from release velocity.
 4. Standardize on a GitOps workflow where the desired state lives in version control, making the cluster a pure function of the repository.
 5. Right-size cloud resources continuously using automated vertical pod autoscaling and spot-instance fleets for fault-tolerant batch workloads.
+
+### 🚀 [2026-10-24 09:00:08 UTC] Auto-Commit Entry
+1. Prioritize `fetchpriority="high"` on your LCP image element to bypass the preload scanner queue and eliminate the single largest driver of LCP variance.
+2. Implement `stale-while-revalidate` on HTML responses via Service Workers to serve instant cached shells while asynchronously validating freshness, decoupling TTFB from origin latency.
+3. Treat Cumulative Layout Shift as a contract violation: reserve explicit aspect-ratio boxes for all late-loading media and ads before the parser reaches them.
+4. Leverage the `Cache-Control: immutable` directive with content-hashed filenames for static assets to eliminate conditional revalidation requests entirely on repeat visits.
+5. Measure Interaction to Next Paint (INP) at the 75th percentile per origin, not page, because a single blocked main thread on a shared layout template drags down the entire domain score.
