@@ -455,3 +455,10 @@
 3. A test suite that runs in seconds but requires hours to decipher a failure has negative ROI; optimize for diagnostic clarity over raw execution speed.
 4. Delete dead code aggressively—every retained line is a liability demanding maintenance, testing, and cognitive overhead for zero business value.
 5. Flaky tests are not "infrastructure problems"; they are specification lies that erode trust faster than having no tests at all.
+
+### 🚀 [2026-10-24 20:00:04 UTC] Auto-Commit Entry
+1. A covering index transforms a random I/O lookup into a sequential index scan, often eliminating the need to touch the heap entirely.
+2. High cardinality columns belong first in composite indexes to maximize predicate filtering and minimize scanned ranges.
+3. The query planner treats statistics as gospel; stale `ANALYZE` data causes catastrophic plan regressions more often than bad schema design.
+4. `LIKE '%suffix'` predicates are fundamentally un-sargable; reverse the column data or use trigram indexes for suffix search performance.
+5. Over-indexing write-heavy tables shifts latency from reads to the WAL flush and checkpoint contention, silently killing throughput.
