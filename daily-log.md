@@ -448,3 +448,10 @@
 3. Treat Cumulative Layout Shift as a contract violation: reserve explicit aspect-ratio boxes for all late-loading media and ads before the parser reaches them.
 4. Leverage the `Cache-Control: immutable` directive with content-hashed filenames for static assets to eliminate conditional revalidation requests entirely on repeat visits.
 5. Measure Interaction to Next Paint (INP) at the 75th percentile per origin, not page, because a single blocked main thread on a shared layout template drags down the entire domain score.
+
+### 🚀 [2026-10-24 14:00:10 UTC] Auto-Commit Entry
+1. Optimize for the cognitive load of the reader, not the keystrokes of the writer, because code is read exponentially more often than it is written.
+2. Debugging is the scientific method applied under pressure: form a falsifiable hypothesis, instrument the smallest possible scope, and trust the data over your intuition.
+3. A test suite that runs in seconds but requires hours to decipher a failure has negative ROI; optimize for diagnostic clarity over raw execution speed.
+4. Delete dead code aggressively—every retained line is a liability demanding maintenance, testing, and cognitive overhead for zero business value.
+5. Flaky tests are not "infrastructure problems"; they are specification lies that erode trust faster than having no tests at all.
