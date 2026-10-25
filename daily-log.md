@@ -462,3 +462,10 @@
 3. The query planner treats statistics as gospel; stale `ANALYZE` data causes catastrophic plan regressions more often than bad schema design.
 4. `LIKE '%suffix'` predicates are fundamentally un-sargable; reverse the column data or use trigram indexes for suffix search performance.
 5. Over-indexing write-heavy tables shifts latency from reads to the WAL flush and checkpoint contention, silently killing throughput.
+
+### 🚀 [2026-10-25 09:00:06 UTC] Auto-Commit Entry
+1. Architecture is the art of deciding what *not* to build, deferring irreversible decisions until the last responsible moment.
+2. Coupling is inevitable; the discipline lies in ensuring it flows toward stability and away from volatility.
+3. Code is read by humans orders of magnitude more than executed by machines; optimize for the reader's cognitive load.
+4. Technical debt is not messy code—it is the interest paid on a decision optimized for speed over evolvability.
+5. Tests are executable specifications; if they require debugging to understand a failure, they have failed their primary purpose.
