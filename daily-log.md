@@ -483,3 +483,10 @@
 3. Eliminate configuration drift by injecting environment-specific values at runtime via secrets managers, never baking credentials or URLs into container images.
 4. Architect for observability first by emitting structured logs, distributed traces, and business metrics as first-class citizens, not afterthoughts.
 5. Automate cost governance with policy-as-code guardrails that prevent resource sprawl and enforce right-sizing before resources hit production.
+
+### 🚀 [2026-10-26 09:00:07 UTC] Auto-Commit Entry
+1. Design for failure by assuming the network is unreliable, partitions are inevitable, and clocks drift arbitrarily.
+2. Idempotency keys are the only safe contract for exactly-once semantics across unreliable transport layers.
+3. Circuit breakers prevent cascade failures, but bulkheads isolate blast radius when the breaker trips too late.
+4. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug partial degradation.
+5. Chaos engineering validates resilience hypotheses, but game days validate your team's runbooks under pressure.
