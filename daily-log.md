@@ -490,3 +490,10 @@
 3. Circuit breakers prevent cascade failures, but bulkheads isolate blast radius when the breaker trips too late.
 4. Observability requires structured logs, distributed traces, and metrics with high cardinality to debug partial degradation.
 5. Chaos engineering validates resilience hypotheses, but game days validate your team's runbooks under pressure.
+
+### 🚀 [2026-10-26 14:00:17 UTC] Auto-Commit Entry
+1. An index is not a free lunch; every write pays the maintenance tax of B-tree rebalancing and page splits, so index only what your read workload actually proves it needs.
+2. Covering indexes eliminate expensive key lookups by including all queried columns, turning a random I/O storm into a sequential index scan that fits in memory.
+3. Statistics are the optimizer's eyes; stale histograms on skewed data distributions cause catastrophic plan choices like nested loops against millions of rows instead of hash joins.
+4. Sargable predicates are non-negotiable; wrapping indexed columns in functions or implicit conversions forces full scans, rendering your carefully crafted indexes useless.
+5. Monitor `last_user_seek` and `user_updates` in `sys.dm_db_index_usage_stats` religiously—indexes with high writes and zero reads are silent performance killers consuming CPU, RAM, and log throughput.
