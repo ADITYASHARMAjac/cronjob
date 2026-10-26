@@ -497,3 +497,10 @@
 3. Statistics are the optimizer's eyes; stale histograms on skewed data distributions cause catastrophic plan choices like nested loops against millions of rows instead of hash joins.
 4. Sargable predicates are non-negotiable; wrapping indexed columns in functions or implicit conversions forces full scans, rendering your carefully crafted indexes useless.
 5. Monitor `last_user_seek` and `user_updates` in `sys.dm_db_index_usage_stats` religiously—indexes with high writes and zero reads are silent performance killers consuming CPU, RAM, and log throughput.
+
+### 🚀 [2026-10-26 20:00:05 UTC] Auto-Commit Entry
+1. Prefer structured concurrency over raw threads to enforce automatic lifecycle management and prevent resource leaks when parent tasks fail.
+2. Backpressure is not optional; unbounded queues between producers and consumers inevitably cause OOM crashes under load spikes.
+3. Async functions that hold locks across `await` points destroy throughput by serializing unrelated work and risking deadlocks.
+4. Object pooling reduces GC pressure for high-frequency allocations, but only if the pool itself doesn't become a contention hotspot.
+5. Memory visibility guarantees require happens-before edges; assuming writes are visible without proper synchronization is a data race waiting to happen.
