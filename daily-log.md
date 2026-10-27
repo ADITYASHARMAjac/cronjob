@@ -504,3 +504,10 @@
 3. Async functions that hold locks across `await` points destroy throughput by serializing unrelated work and risking deadlocks.
 4. Object pooling reduces GC pressure for high-frequency allocations, but only if the pool itself doesn't become a contention hotspot.
 5. Memory visibility guarantees require happens-before edges; assuming writes are visible without proper synchronization is a data race waiting to happen.
+
+### 🚀 [2026-10-27 09:00:07 UTC] Auto-Commit Entry
+1. Architecture is the art of deciding what *not* to couple, because every dependency is a liability waiting to compound.
+2. Write code for the maintenance programmer who inherits it at 3 AM, not for the compiler that parses it today.
+3. Premature abstraction creates rigid indirection; wait for the third occurrence of duplication before extracting a shared contract.
+4. Observability is not a feature you add later—it is the structural requirement that lets you verify the system behaves as designed.
+5. Consistency in naming, error handling, and module boundaries reduces cognitive load more effectively than any single design pattern.
