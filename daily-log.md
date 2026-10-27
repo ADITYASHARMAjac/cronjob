@@ -511,3 +511,10 @@
 3. Premature abstraction creates rigid indirection; wait for the third occurrence of duplication before extracting a shared contract.
 4. Observability is not a feature you add later—it is the structural requirement that lets you verify the system behaves as designed.
 5. Consistency in naming, error handling, and module boundaries reduces cognitive load more effectively than any single design pattern.
+
+### 🚀 [2026-10-27 14:00:15 UTC] Auto-Commit Entry
+1. Prefer composition over inheritance to isolate variation and enable runtime behavior substitution without fragile base-class hierarchies.
+2. Architectural boundaries should align with business capabilities, not technical layers, to minimize cross-team coordination and deployment coupling.
+3. Explicit dependency injection makes component contracts visible and testable, transforming hidden temporal coupling into compile-time safety.
+4. Design for observability first by emitting structured events at domain boundaries, turning production debugging from archaeology into queryable analytics.
+5. Relentlessly eliminate primitive obsession by wrapping scalars in domain-specific value objects that enforce invariants and document intent at the call site.
